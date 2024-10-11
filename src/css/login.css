@@ -4,27 +4,50 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #17637a;
+    background-color: #deedf2;
   
-
 }
 
 .login{
-    background-color: #0c3854;
-    padding: 100px;
-    max-width: 500px;
+    background-color: #ffffff;
+    padding: 30px;
+    width: 350px;
     display: flex;
     flex-direction: column;
     border-radius: 50px;
 
 }
+.google{
+display: flex;
+/* flex-direction: column; */
+gap: 20px;
+
+}
+.login .google p{
+    margin-top: 20px;
+    font-size: 27px;
+    font-weight: 600;
+    color: black !important;
+}
+.login span{
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: 500;
+    color: rgb(44, 42, 42);
+}
+.login p{
+    font-size: 17px;
+    font-weight: 400;
+    color: rgb(77, 74, 74);
+}
 .loginwrapper img{
-    width: 200px;
-    margin-bottom: 80px;
+    height: 70px;
+    width: 70px;
+    /* margin-bottom: 40px; */
 }
 
 .gmail_login{
-    background-color:  #04183b;
+    background-color:  #0a41a5;
     border: 0;
     padding: 15px 30px;
     color: white;
@@ -33,6 +56,6 @@
     font-size: 15px;
     outline: 0; 
     cursor: pointer;
-    margin-top: 40px;
+    margin-top: 20px;
     border-radius: 40px;
 }
