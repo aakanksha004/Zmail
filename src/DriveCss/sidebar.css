@@ -1,0 +1,205 @@
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    transition: transform 0.3s ease-in-out;
+
+}
+.sidebar Button svg{
+    font-size: 40px;
+    color: rgb(62, 97, 146);
+}
+Button span{
+    font-size: 22px;
+    text-transform: capitalize;
+    color: rgb(127, 160, 203);
+}
+
+
+  .sidebar_hidden {
+    display: none;
+    transform: translateX(-100%);
+  }
+  
+  .sidebar_visible {
+    transform: translateX(0);
+    display: block;
+  }
+  
+.compose_btn{
+    padding: 10px 20px !important;
+    border-radius: 40px !important;
+    box-shadow: 2px 2px 3px #ccc;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    margin-left: 10px !important;
+    max-width: 150px;
+    color: rgb(91, 89, 89);
+
+
+
+
+}
+.sidebaroptions_heading{
+    font-size: 15px;
+    margin: 0;
+    margin-left: 25px;
+
+}
+
+.show-more-options {
+    transition: max-height 1s ease, opacity 0.4s ease; /* Longer duration for smoother transition */
+    opacity: 0; /* Start with 0 opacity */
+    max-height: 0; /* Start with max-height of 0 */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.show-more-options.active {
+    opacity: 1; /* Fade in effect */
+    max-height: 500px; /* Set a sufficient max-height to fit your content */
+}
+
+
+
+
+.sidebarOptions{
+    display: flex;
+    align-items: center;
+    height: 35px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 0px 25px;
+    margin-right: 20px;
+
+}
+.sidebarOptions:hover{
+    cursor: pointer;
+    background-color: rgb(237, 227, 229);
+}
+
+
+/* Dark mode hover effect */
+.dark .sidebarOptions:hover {
+    background-color: #444c59; /* Slightly transparent white background on hover for dark mode */
+}
+
+.sidebarOptions svg{
+    color: #808080; 
+    font-size: 20px;
+    width: 20px;
+}
+
+.sidebarOptions h4{
+    font-size: 14px;
+    flex:1;
+    margin-left: 10px;
+     font-weight: normal;
+}
+
+.sidebarOptions p{
+    opacity: 0;
+    color: gray;
+    font-size: 12px;
+}
+
+.sidebarOptions--active{
+    background-color: #fce8e6;
+
+}
+
+.sidebarOptions--active h4,
+.sidebarOptions--active p,
+.sidebarOptions--active svg{
+    color: #d93025;
+    font-weight: bold;
+    opacity: 1;
+
+}
+
+.storage{
+    margin-top: 20px;
+}
+
+
+.progress_bar{
+    display: flex;
+    flex-direction: column;
+    /* padding: 20px; */
+    margin-left: 25px;
+    
+}
+
+
+
+.progress_bar span{
+    display: block;
+    font-size: 14px;
+    color: gray;
+}
+
+.modal_pop{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    top: 50%;
+    background-color:#fff;
+    width: 300px;
+    height: 250px;
+    margin: 0px auto;
+    position: relative;
+    transform: translateY(-50%);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.modalHeading{
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+    height: 40px;
+    color: rgb(6, 32, 82);
+}
+.modalBody{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-size: 50px;
+}
+.file{
+    margin-top: 30px;
+}
+
+
+.post_submit{
+    width: 100%;
+    background: rgb(69, 148, 180);
+    padding: 10px 20px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 16px;
+    border: 0;
+    outline: 0;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 80px;
+}
+
+.uploading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 90px;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(67, 147, 134);
+    border-radius: 20px;
+    
+}
+.uploading p{
+    color: white;
+    font-size: 20px;
+}
