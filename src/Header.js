@@ -43,7 +43,8 @@ const Header = ({ toggleSidebar, setDarkMode }) => {
                 <IconButton onClick={toggleSidebar}>
                     <ReorderIcon />
                 </IconButton>
-                <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r2.png" alt="" />
+                <img src="https://st2.depositphotos.com/3867453/9096/v/450/depositphotos_90960528-stock-illustration-letter-z-logo-icon-design.jpg" alt="" />
+                <p>Mail</p>
             </div>
 
             <div className='header_middle'>
