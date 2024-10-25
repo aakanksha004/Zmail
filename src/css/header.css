@@ -25,17 +25,19 @@
 }
 .header_left p{
     color: #d93025;
-    font-size: 25px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
     align-items: flex-start !important;
+    justify-content: center;
+    margin-bottom: 22px;
 }
 .header_left img:hover{
     cursor: pointer;
 
 }
 .header_left img{
-    height: 90px;
-    width: 90px;
+    height: 55px;
+    width: 55px;
     align-items: flex-end !important;
     
     

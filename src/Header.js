@@ -11,6 +11,7 @@ import { useSelector } from 'react-redux';
 import { selectUser } from './features/userSlice';
 import firebase from 'firebase/compat/app';
 import { useTheme } from '@mui/material/styles'; // Import useTheme
+import logo from './logo.png';
 
 const Header = ({ toggleSidebar, setDarkMode }) => { 
     const user = useSelector(selectUser);
@@ -43,7 +44,7 @@ const Header = ({ toggleSidebar, setDarkMode }) => {
                 <IconButton onClick={toggleSidebar}>
                     <ReorderIcon />
                 </IconButton>
-                <img src="https://st2.depositphotos.com/3867453/9096/v/450/depositphotos_90960528-stock-illustration-letter-z-logo-icon-design.jpg" alt="" />
+                <img src={logo} alt="" />
                 <p>Mail</p>
             </div>
 
