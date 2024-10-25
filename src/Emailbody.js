@@ -9,24 +9,24 @@ import { useDispatch, useSelector } from 'react-redux';
 import { openMessage } from './features/mailSlice';
 import { addStarredEmail, removeStarredEmail, selectStarredEmails } from './features/starredSlice'; // Import actions and selector
 
-const Emailbody = ({ name, subject, message, email, time }) => {
+const Emailbody = ({id, name, subject, message, email, time }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const starredEmails = useSelector(selectStarredEmails); // Get starred emails from the store
 
   // Check if the email is already starred
-  const isStarred = starredEmails.some(starredEmail => starredEmail.email === email);
+  const isStarred = starredEmails.some(starredEmail => starredEmail.id === id);
 
   const setMail = () => {
-    dispatch(openMessage({ name, subject, message, email, time }));
+    dispatch(openMessage({id, name, subject, message, email, time }));
     navigate('/mail');
   };
 
   const handleClick = () => {
     if (isStarred) {
-      dispatch(removeStarredEmail({ email })); // Remove from starred
+      dispatch(removeStarredEmail({ id })); // Remove from starred
     } else {
-      dispatch(addStarredEmail({ name, subject, message, email, time })); // Add to starred
+      dispatch(addStarredEmail({ id, name, subject, message, email, time })); // Add to starred
     }
   };
 

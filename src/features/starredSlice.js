@@ -9,14 +9,14 @@ const starredSlice = createSlice({
   reducers: {
     addStarredEmail: (state, action) => {
       // Check if email already exists in the starredEmails
-      const exists = state.starredEmails.find(email => email.email === action.payload.email);
+      const exists = state.starredEmails.find(email => email.id === action.payload.id);
       if (!exists) {
         state.starredEmails.push(action.payload); // Add email to starred list
       }
     },
     removeStarredEmail: (state, action) => {
       // Remove email from starredEmails by filtering it out
-      state.starredEmails = state.starredEmails.filter(email => email.email !== action.payload.email);
+      state.starredEmails = state.starredEmails.filter(email => email.id !== action.payload.id);
     },
   },
 });

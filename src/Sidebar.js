@@ -22,7 +22,7 @@ import { useTheme } from '@mui/material/styles';
 
 const Sidebar = () => {
   const theme = useTheme(); 
-  const [activeOption, setActiveOption] = useState('Inbox'); // Track active option
+  const [activeOption, setActiveOption] = useState(''); // Track active option
   const [showMore, setShowMore] = useState(false); // State for show more/less functionality
   const dispatch = useDispatch();
   
@@ -76,10 +76,14 @@ const Sidebar = () => {
         onClick={() => handleOptionClick('Important')} 
       />
 
+     
       {/* Only show these options when 'showMore' is true */}
+      
+      
       <div className={`show-more-options ${showMore ? 'active' : ''}`}>
       {showMore && (
         <>
+        <Link to="/sent" style={{ textDecoration: 'none', color: 'black' }}>
           <SidebarOptions 
             Icon={SendIcon} 
             title="Sent" 
@@ -87,7 +91,7 @@ const Sidebar = () => {
             isactive={activeOption === 'Sent'} 
             onClick={() => handleOptionClick('Sent')} 
           />
-
+</Link>
           <SidebarOptions 
             Icon={DraftsIcon} 
             title="Drafts" 

@@ -23,7 +23,7 @@ const Emaillist = () => {
 
 {
     emails.map(({id,data})=>{
-      return  <Emailbody key={id} name={data.fromName} subject={data.subject} message={data.message} email={data.from} time={new Date(data.timestamp?.seconds*1000).toLocaleTimeString()}/>
+      return  <Emailbody id={id} name={data.fromName} subject={data.subject} message={data.message} email={data.from} time={new Date(data.timestamp?.seconds*1000).toLocaleTimeString()}/>
 
 
     })

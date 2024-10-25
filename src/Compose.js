@@ -56,9 +56,22 @@ function Compose() {
     setMessage("");
     alert("email sent succesfully");
     dispatch(closeSendMessage());
+
+    db.collection("sent").add({
+      to: to,
+      subject: subject,
+      message: message,
+      from: user.email,
+      fromName: user.displayName,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      folder: 'sent'  // Mark the email as part of the sent folder
+    });
     
 
   }
+
+
+
   return (
     <div className='compose'>
         <div className='compose_header'>

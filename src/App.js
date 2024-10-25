@@ -14,12 +14,14 @@ import Starredemail from './Starredemail';
  // Import your Add to Drive page
 import NoLayout from './NoLayout'; // Import NoLayout for no-header, no-sidebar layout
 import AddToDrive from './Drive/AddToDrive';
+import Sentmail from './Sentmail';
 
 function App({ setDarkMode }) { // Receive setDarkMode as a prop
   const [isSidebarVisible, setSidebarVisible] = useState(true);
   const dispatch = useDispatch();
   const isMessageOpen = useSelector(selectsendMessageIsOpen);     
   const user = useSelector(selectUser);
+  
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -50,7 +52,7 @@ function App({ setDarkMode }) { // Receive setDarkMode as a prop
               path="/"
               element={
                 <>
-                  <Header toggleSidebar={toggleSidebar} setDarkMode={setDarkMode} /> {/* Pass setDarkMode to Header */}
+                  <Header toggleSidebar={toggleSidebar} setDarkMode={setDarkMode}  /> {/* Pass setDarkMode to Header */}
                   <div className='app_body'> 
                     <Sidebar isVisible={isSidebarVisible} />
                     <Emaillist />
@@ -80,6 +82,19 @@ function App({ setDarkMode }) { // Receive setDarkMode as a prop
                   <div className='app_body'>
                     <Sidebar isVisible={isSidebarVisible} />
                     <Starredemail />
+                  </div>
+                  {isMessageOpen && <Compose />}
+                </>
+              }
+            />
+             <Route
+              path="/sent"
+              element={
+                <>
+                  <Header toggleSidebar={toggleSidebar} setDarkMode={setDarkMode} />
+                  <div className='app_body'>
+                    <Sidebar isVisible={isSidebarVisible} />
+                    <Sentmail />
                   </div>
                   {isMessageOpen && <Compose />}
                 </>

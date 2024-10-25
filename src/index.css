@@ -6,6 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: background-color 0.3s ease;
+  flex: 1;
+  overflow: hidden;
 }
 /* Add these styles in your CSS file */
 
@@ -31,4 +33,5 @@ code {
 .app_body{
   display: grid;
   grid-template-columns: 250px auto 50px ;
+  flex: 1;
 }
